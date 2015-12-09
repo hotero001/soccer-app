@@ -139,6 +139,8 @@
                     </view>
                     <connections>
                         <outlet property="awayTeamLabel" destination="s6l-L7-sEN" id="fYM-MV-VnK"/>
+                        <outlet property="countDownButton" destination="nly-oP-EJ2" id="kzu-fo-sI2"/>
+                        <outlet property="stopCountButton" destination="vZq-hQ-fiP" id="fPI-Te-3YG"/>
                         <outlet property="textFromFirstLabel" destination="Hv8-1r-SQ4" id="WND-3G-kbf"/>
                         <outlet property="timerLabel" destination="LKO-gA-Xen" id="r5K-PF-cDE"/>
                     </connections>

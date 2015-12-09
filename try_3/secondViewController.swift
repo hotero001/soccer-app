@@ -14,6 +14,8 @@ class SecondViewController: UIViewController{
     @IBOutlet weak var textFromFirstLabel: UILabel!
     @IBOutlet weak var awayTeamLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var countDownButton: UIButton!
+    @IBOutlet weak var stopCountButton: UIButton!
     
     
     var firstVCText = ""
@@ -31,6 +33,9 @@ class SecondViewController: UIViewController{
         awayTeamLabel.text = awayTeam
         timerLabel.text = halfTimeLength
         counter = Int(halfTimeLength)
+        
+        countDownButton.setTitle("Start", forState:.Normal)
+        stopCountButton.setTitle("Stop", forState:.Normal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,11 +45,12 @@ class SecondViewController: UIViewController{
     
     @IBAction func startTimer(sender: AnyObject){
         if !timer.valid{
-            var view = UIView()
-            view = sender as! UIView
-            view.userInteractionEnabled = true
+            //var view = UIView()
+            //view = sender as! UIView
+            //view.userInteractionEnabled = true
             timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "countDown", userInfo: nil, repeats: true)
-            view.userInteractionEnabled = false
+            //view.userInteractionEnabled = false
+            countDownButton.enabled = false
         }
     }
 
@@ -53,6 +59,7 @@ class SecondViewController: UIViewController{
         timer.invalidate()
         //let time = Int(halfTimeLength)
         //counter = Int(halfTimeLength)!
+        countDownButton.enabled = true
     }
     
     func countDown() {

@@ -50,6 +50,8 @@ class ViewController: UIViewController {
         
         startTextField.placeholder = "Game Start Time"
         startTextField.textAlignment = NSTextAlignment.Center
+        
+        segueButton.setTitle("Save & Continue", forState:.Normal)
     }
 
     override func didReceiveMemoryWarning() {
