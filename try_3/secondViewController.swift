@@ -16,6 +16,20 @@ class SecondViewController: UIViewController{
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var countDownButton: UIButton!
     @IBOutlet weak var stopCountButton: UIButton!
+    @IBOutlet weak var restartTimeButton: UIButton!
+    @IBOutlet weak var homeTeamScore: UILabel!
+    @IBOutlet weak var awayTeamScore: UILabel!
+    @IBOutlet weak var modifyHomeTeamScoreButton: UIButton!
+    @IBOutlet weak var modifyAwayTeamScoreButton: UIButton!
+    @IBOutlet weak var homeTeamBookingButton: UIButton!
+    @IBOutlet weak var awayTeamBookingButton: UIButton!
+    @IBOutlet weak var homeTeamScoreStepper: UIStepper!
+    @IBOutlet weak var awayTeamScoreStepper: UIStepper!
+    
+    @IBOutlet weak var pressDoneAwayButton: UIButton!
+    
+    
+    //How to Make the team score scrollable when the add score button is pushed? Then set it to the score it was left on and deactivate the scrollability by pressing Add Score again
     
     
     var firstVCText = ""
@@ -36,8 +50,24 @@ class SecondViewController: UIViewController{
         
         countDownButton.setTitle("Start", forState:.Normal)
         stopCountButton.setTitle("Stop", forState:.Normal)
+        restartTimeButton.setTitle("Reset Time", forState:.Normal)
+        
+        homeTeamScore.text = "\(0)"
+        awayTeamScore.text = "\(0)"
+        
+        modifyHomeTeamScoreButton.setTitle("Add Score", forState:.Normal)
+        modifyAwayTeamScoreButton.setTitle("Add Score", forState:.Normal)
+        
+        homeTeamBookingButton.setTitle("Add Booking", forState:.Normal)
+        awayTeamBookingButton.setTitle("Add Booking", forState:.Normal)
+        
+        homeTeamScoreStepper.enabled = false
+        awayTeamScoreStepper.enabled = false
+        
+        pressDoneAwayButton.setTitle("Press when done", forState:.Normal)
+        pressDoneAwayButton.hidden = true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -60,6 +90,29 @@ class SecondViewController: UIViewController{
         //let time = Int(halfTimeLength)
         //counter = Int(halfTimeLength)!
         countDownButton.enabled = true
+    }
+    
+    @IBAction func resetTimer(sender: AnyObject) {
+        counter = Int(halfTimeLength)
+        timerLabel.text = halfTimeLength
+        //resetTime = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "restartDown", userInfo: nil,)
+    }
+    
+    @IBAction func addHomeScore(sender: AnyObject) {
+        homeTeamScoreStepper.enabled = true
+        modifyHomeTeamScoreButton.setTitle("Press when Done", forState:.Normal)
+    }
+    
+    @IBAction func addAwayScore(sender: AnyObject) {
+        pressDoneAwayButton.hidden = false
+        awayTeamScoreStepper.enabled = true
+        modifyAwayTeamScoreButton.hidden = true
+    }
+    
+    @IBAction func stopAddAwayScore(sender: AnyObject) {
+        awayTeamScoreStepper.enabled = false
+        modifyAwayTeamScoreButton.hidden = false
+        pressDoneAwayButton.hidden = true
     }
     
     func countDown() {

@@ -103,43 +103,107 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv8-1r-SQ4">
-                                <rect key="frame" x="105" y="189" width="72" height="21"/>
+                                <rect key="frame" x="96" y="142" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6l-L7-sEN">
-                                <rect key="frame" x="246" y="189" width="127" height="21"/>
+                                <rect key="frame" x="242" y="142" width="127" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKO-gA-Xen">
-                                <rect key="frame" x="183" y="399" width="42" height="21"/>
+                                <rect key="frame" x="169" y="77" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nly-oP-EJ2">
-                                <rect key="frame" x="96" y="479" width="46" height="30"/>
+                                <rect key="frame" x="62" y="77" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="startTimer:" destination="W0m-0j-eTQ" eventType="touchUpInside" id="SYv-ba-LFe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZq-hQ-fiP">
-                                <rect key="frame" x="259" y="479" width="46" height="30"/>
+                                <rect key="frame" x="242" y="77" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="stopTimer:" destination="W0m-0j-eTQ" eventType="touchUpInside" id="k7T-KY-lpz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59t-to-nbf">
+                                <rect key="frame" x="140" y="414" width="101" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="W0m-0j-eTQ" eventType="touchUpInside" id="bQP-Al-v0s"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjm-Ue-3He">
+                                <rect key="frame" x="96" y="182" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkV-VK-ISL">
+                                <rect key="frame" x="242" y="182" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zo-L5-OFe">
+                                <rect key="frame" x="38" y="222" width="149" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="addHomeScore:" destination="W0m-0j-eTQ" eventType="touchUpInside" id="tgF-L9-Nqc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTU-Sb-TKJ">
+                                <rect key="frame" x="188" y="222" width="131" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="addAwayScore:" destination="W0m-0j-eTQ" eventType="touchUpInside" id="URt-p9-LDT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bL1-wo-7dJ">
+                                <rect key="frame" x="45" y="331" width="144" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLX-dE-0er">
+                                <rect key="frame" x="195" y="331" width="136" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="K0v-es-jBr">
+                                <rect key="frame" x="75" y="285" width="94" height="29"/>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7YP-Dm-6A7">
+                                <rect key="frame" x="211" y="285" width="94" height="29"/>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbl-qL-60K">
+                                <rect key="frame" x="188" y="240" width="133" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="stopAddAwayScore:" destination="W0m-0j-eTQ" eventType="touchUpInside" id="R00-hW-csy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="awayTeamBookingButton" destination="iLX-dE-0er" id="JCu-mL-wxx"/>
                         <outlet property="awayTeamLabel" destination="s6l-L7-sEN" id="fYM-MV-VnK"/>
+                        <outlet property="awayTeamScore" destination="gkV-VK-ISL" id="QbD-D9-Ycm"/>
+                        <outlet property="awayTeamScoreStepper" destination="7YP-Dm-6A7" id="Hd2-cB-CqP"/>
                         <outlet property="countDownButton" destination="nly-oP-EJ2" id="kzu-fo-sI2"/>
+                        <outlet property="homeTeamBookingButton" destination="bL1-wo-7dJ" id="8ra-MG-wnT"/>
+                        <outlet property="homeTeamScore" destination="xjm-Ue-3He" id="odF-CQ-Glm"/>
+                        <outlet property="homeTeamScoreStepper" destination="K0v-es-jBr" id="LDj-P0-mGS"/>
+                        <outlet property="modifyAwayTeamScoreButton" destination="OTU-Sb-TKJ" id="fVJ-RV-4xX"/>
+                        <outlet property="modifyHomeTeamScoreButton" destination="7Zo-L5-OFe" id="yUZ-SE-Th0"/>
+                        <outlet property="pressDoneAwayButton" destination="cbl-qL-60K" id="EM3-cA-ZlQ"/>
+                        <outlet property="restartTimeButton" destination="59t-to-nbf" id="jmv-8k-wTI"/>
                         <outlet property="stopCountButton" destination="vZq-hQ-fiP" id="fPI-Te-3YG"/>
                         <outlet property="textFromFirstLabel" destination="Hv8-1r-SQ4" id="WND-3G-kbf"/>
                         <outlet property="timerLabel" destination="LKO-gA-Xen" id="r5K-PF-cDE"/>
